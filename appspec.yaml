@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: 'arn:aws:ecs:ap-south-1:653380732738:task-definition/brandpts-task'
+        LoadBalancerInfo:
+          ContainerName: 'brandpts-container'
+          ContainerPort: 3735
+        PlatformVersion: 'LATEST'

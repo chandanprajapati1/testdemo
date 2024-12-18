@@ -1,0 +1,53 @@
+{
+    "family": "brandpts-task",
+    "containerDefinitions": [
+        {
+            "name": "brandpts-container",
+            "image": "653380732738.dkr.ecr.ap-south-1.amazonaws.com/brandpts-node",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "brandpts-node-3735",
+                    "containerPort": 3735,
+                    "hostPort": 3735,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "command": [
+                "npm",
+                "run",
+                "start"
+            ],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/brandpts-task",
+                    "awslogs-region": "ap-south-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::653380732738:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::653380732738:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}
