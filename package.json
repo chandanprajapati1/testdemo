@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"No tests specified\" && exit 0"  
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"No build command specified\""
   },
   "keywords": [],
   "author": "",
