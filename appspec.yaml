@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: 'arn:aws:ecs:ap-south-1:653380732738:task-definition/brandpts-task'
+        TaskDefinition: 'arn:aws:ecs:ap-south-1:957779811736:task-definition/brandpts-task:1'
         LoadBalancerInfo:
           ContainerName: 'brandpts-container'
           ContainerPort: 3735
